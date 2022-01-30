@@ -11,7 +11,9 @@ const IncomeList = ({ income, setIncome }) => {
     return(
         <div className="income-list">
             {
-                income.sort(sortByDate)
+                income.sort(sortByDate).map((value, index) => (
+                    <IncomeItem key={index} index={index} income={value} removeIncome={removeIncome} />
+                ))
             }
         </div>
     );
