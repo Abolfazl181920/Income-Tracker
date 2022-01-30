@@ -1,6 +1,6 @@
 import React from 'react';
 
-const IncomeForm = () => {
+const IncomeForm = ({ income, setIncome }) => {
     return (
         <form className="income-form">
             <div className="form-inner">
