@@ -1,8 +1,11 @@
 import React from 'react';
 
-const Header = () => {
+const Header = ({ totalIncome }) => {
     return(
-        <div>Header</div>
+        <header>
+            <h1>Income Total</h1>
+            <div className="total-income">$ {totalIncome}</div>
+        </header>
     );
 }
 
