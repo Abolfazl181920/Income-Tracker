@@ -1,6 +1,6 @@
 import React from 'react';
 
-const IncomeList = () => {
+const IncomeList = ({ income, setIncome }) => {
     return(
         <div className="income-list"></div>
     );
