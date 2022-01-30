@@ -12,7 +12,12 @@ const IncomeList = ({ income, setIncome }) => {
         <div className="income-list">
             {
                 income.sort(sortByDate).map((value, index) => (
-                    <IncomeItem key={index} index={index} income={value} removeIncome={removeIncome} />
+                    <IncomeItem
+                        key={index}
+                        index={index}
+                        income={value}
+                        removeIncome={removeIncome}
+                    />
                 ))
             }
         </div>
