@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 import Header from './Components/Header';
+import IncomeForm from './Components/IncomeForm';
 
 const App = () => {
 
@@ -10,6 +11,7 @@ const App = () => {
   return (
     <div className="App">
       <Header totalIncome={totalIncome} />
+      <IncomeForm />
     </div>
   );
 }
