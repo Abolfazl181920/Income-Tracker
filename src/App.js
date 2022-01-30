@@ -14,7 +14,7 @@ const App = () => {
     for (let i = 0; i < income.length; i++) {
       temp += parseInt(income[i].price);
     }
-    setIncome(temp);
+    setTotalIncome(temp);
 
   }, [income]);
   return (
