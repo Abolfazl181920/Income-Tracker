@@ -7,7 +7,21 @@ const IncomeForm = ({ income, setIncome }) => {
     const price = useRef(null);
 
     const addIncome = (event) => {
+
         event.preventDefault();
+
+        let date = date.current.value.split("-");
+        let newDate = new Date( date[0], date[1], date[2] );
+
+        setIncome([...income, {
+            "desc": description.current.value,
+            "price": description.current.value,
+            "date": newDate.getTime()
+        }]);
+
+        description.current.value = "";
+        price.current.value = null;
+        date.current.value = null;
     }
 
     return (
@@ -33,7 +47,7 @@ const IncomeForm = ({ income, setIncome }) => {
                     placeholder="Income Description"
                     placeholder="Income Date..."
                 />
-                
+
                 <input
                     type="submit"
                     value="Add Income"
