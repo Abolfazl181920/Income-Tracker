@@ -9,7 +9,11 @@ const IncomeList = ({ income, setIncome }) => {
         setIncome(temp);
     }
     return(
-        <div className="income-list"></div>
+        <div className="income-list">
+            {
+                income.sort(sortByDate)
+            }
+        </div>
     );
 }
 
