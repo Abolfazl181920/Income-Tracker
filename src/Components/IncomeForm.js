@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 
 const IncomeForm = ({ income, setIncome }) => {
     return (
