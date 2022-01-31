@@ -1,6 +1,6 @@
 import React, {useRef} from 'react';
 
-function IncomeForm({ income, setIncome }) {
+const IncomeForm = ({ income, setIncome }) => {
   const desc = useRef(null);
   const date = useRef(null);
   const price = useRef(null);
@@ -25,10 +25,32 @@ function IncomeForm({ income, setIncome }) {
   return (
     <form className="income-form" onSubmit={AddIncome}>
       <div className="form-inner">
-        <input type="text" name="desc" id="desc" placeholder="Income Description..." ref={desc} /> 
-        <input type="number" name="price" id="price" placeholder="Price..." ref={price}/>
-        <input type="date" name="date" id="date" placeholder="Income date..." ref={date} />
-        <input type="submit" value="Add Income" />
+        <input
+          type="text"
+          id="desc"
+          placeholder="Income Description..."
+          ref={desc}
+        /> 
+
+        <input
+          type="number"
+          id="price"
+          placeholder="Price..."
+          ref={price}
+        />
+
+        <input
+          type="date"
+          id="date"
+          placeholder="Income date..."
+          ref={date}
+        />
+        
+        <input
+          type="submit"
+          value="Add Income"
+        />
+        
       </div>
     </form>
   )
